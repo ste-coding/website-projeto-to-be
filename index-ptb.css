@@ -5,9 +5,20 @@
     box-sizing: border-box;
 }
 
+/*@font-face{
+    font-family: "Bungee";
+    src:url(/fonts/bungee.regular-webfont.woff);
+}
+
+@font-face{
+    font-family: "rajdhani-medium";
+    src:url(/fonts/rajdhani.medium-webfont.woff);
+}*/
+
 body{
     margin: 0;
-    font-family: "Roboto", sans-serif
+    font-family: "Verdana","Roboto", sans-serif;
+    line-height: 1.5;
 }
 
 li{
@@ -82,17 +93,25 @@ li{
 .head{
     color:#FF9100;
     font-size: 42px;
+    font-family: "Bungee", "Roboto", sans-serif;
 }
 
 .slogan{
-    font-size: 30px;
-    color: #6D90C6;
-    line-height: 60px;
+    font-size: 26px;
+    color: #A4D80A;
+    font-weight: bold;
 }
 
 
 .content-text{
     text-align: justify;
+    font-size: 16px;
+}
+
+.presentation-text{
+    text-align: justify;
+    font-size: 16px;
+    font-style: italic;
 }
 
 .our-history{
@@ -104,19 +123,30 @@ li{
 
 .title{
     font-size: 32px;
-    color: #A4D80A;
+    color: #FF9100;
     line-height: 60px;
+    text-align: center;
 }
 .subtitle{
     color: #6D90C6;
     font-size: 26px;
     font-weight: bold;
+    text-align: left;
+
+}
+
+.subtitle-name{
+    color: #6D90C6;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: left;
 
 }
 
 .description{
-    color: #828282;
+    color: #3D0349;
     font-size: 16px;
+    font-weight: bold;
 }
 
 .wrapper-equipe{
@@ -130,6 +160,7 @@ li{
     max-width: 300px;
     max-height: 300px;
     margin-top: 100px;
+    border-radius: 50%;
 }
 
 .footer{
@@ -159,8 +190,62 @@ li{
 }
 
 .avatar{
-    width: 180px;
-    height: 180px;
-    border-radius: 200px;
-    border-radius: 5px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
 }
+
+@media screen and (max-width: 767px) {
+    header .control-nav {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      display: block;
+      width: 30px;
+      padding: 5px 0;
+      border: solid #333;
+      border-width: 3px 0;
+      z-index: 2;
+      cursor: pointer;
+    }
+  
+    header .control-nav:before {
+      content: "";
+      display: block;
+      height: 3px;
+      background: #333;
+    }
+  
+    header .control-nav-close {
+      position: fixed;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      z-index: 1;
+      background: rgba(0,0,0,0.4);
+      -webkit-transition: all 500ms ease;
+      transition: all 500ms ease;
+      -webkit-transform: translate(100%, 0);
+      -ms-transform: translate(100%, 0);
+      transform: translate(100%, 0);
+    }
+  
+    header nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 250px;
+      border-left: 1px solid #ccc;
+      background: #fff;
+      overflow-x: auto;
+      z-index: 2;
+      -webkit-transition: all 500ms ease;
+      transition: all 500ms ease;
+      -webkit-transform: translate(100%, 0);
+      -ms-transform: translate(100%, 0);
+      transform: translate(100%, 0);
+    }
+  }
